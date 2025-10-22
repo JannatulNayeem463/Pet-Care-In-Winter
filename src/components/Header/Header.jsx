@@ -1,12 +1,20 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom"; 
+import React, { use, useState } from "react";
+import { NavLink} from "react-router-dom"; 
 import logo from "../../assets/logo.png";
+import { Link } from "react-router";
+import AuthProvider, { AuthContext } from "../../provider/AuthProvider";
 
 const Header = () => {
   
-  const [user, setUser] = useState(null);
+  const {user1,logOut} = use(AuthContext)
+
+  const [user, setUser] = useState (null);
+  
 
   const handleLogin = () => {
+    
+    
+
     setUser({
       displayName: "John Doe",
       avatarUrl: "https://i.pravatar.cc/40",
@@ -15,6 +23,13 @@ const Header = () => {
 
   const handleLogout = () => {
     setUser(null);
+    console.log("hgfth dddf");
+    logOut().then(() => {
+      alert("You Logged Out Successfully")
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   };
 
   return (
@@ -88,10 +103,12 @@ const Header = () => {
           </>
         ) : (
           <>
-            <button onClick={handleLogin} className="btn btn-primary">
+           <Link to="/auth/login">
+           <button onClick={handleLogin} className="btn btn-outline btn-primary" >
               Login
             </button>
-            <NavLink to="/register" className="btn btn-outline btn-primary">
+           </Link>
+            <NavLink to="/auth/register" className="btn btn-outline btn-primary">
               Register
             </NavLink>
           </>

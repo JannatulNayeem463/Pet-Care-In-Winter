@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "How to Keep Your Dog's Coat Shiny",
+      "description": "Learn grooming techniques and products that help maintain a healthy coat.",
+      "link": "/tips/keep-dog-coat-shiny"
+    },
+    {
+      "id": 2,
+      "title": "Understanding Your Cat's Body Language",
+      "description": "Decode your cat's signals to improve communication and bond.",
+      "link": "/tips/understand-cat-body-language"
+    },
+    {
+      "id": 3,
+      "title": "Preparing Your Pet for Winter",
+      "description": "Essential tips to keep your pets warm and safe during the cold season.",
+      "link": "/tips/preparing-pet-for-winter"
+    },
+    {
+      "id": 4,
+      "title": "Healthy Nutrition for Senior Pets",
+      "description": "Adjusting diets to keep your senior pets healthy and active.",
+      "link": "/tips/healthy-nutrition-senior-pets"
+    },
+    {
+      "id": 5,
+      "title": "Winter Exercise Tips for Pets",
+      "description": "Safe and fun ways to keep your pets active during the colder months.",
+      "link": "/tips/winter-exercise-for-pets"
+    },
+    {
+      "id": 6,
+      "title": "Protecting Pets from Winter Hazards",
+      "description": "How to avoid common winter dangers such as antifreeze poisoning and frostbite.",
+      "link": "/tips/protecting-pets-winter-hazards"
+    }
+  ]
+  

@@ -1,0 +1,75 @@
+[
+    {
+      "serviceId": 1,
+      "serviceName": "Winter Coat Fitting for Dogs",
+      "providerName": "PawCare Studio",
+      "providerEmail": "info@pawcare.com",
+      "price": 25,
+      "rating": 4.9,
+      "slotsAvailable": 4,
+      "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_qZ6w9LvFw0gTn8K9v-iAC4pKf02Na4GaUi_oMXZozfhNBnUFYbvMA_uuC9HufSHeGoo&usqp=CAU",
+      "category": "Clothing"
+    },
+    {
+      "serviceId": 2,
+      "serviceName": "Winter Grooming & Paw Treatment",
+      "providerName": "CozyPets Grooming",
+      "providerEmail": "hello@cozypets.com",
+      "price": 30,
+      "rating": 4.8,
+      "slotsAvailable": 3,
+      "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+       "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr2u47f8Pze9qJAATAcIHEQlGt3fXz1TEx9WKmYZxs2Z71wZkXSMhUpIvzuTJkQIWBkf8&usqp=CAU",
+      "category": "Grooming"
+    },
+    {
+      "serviceId": 3,
+      "serviceName": "Heated Cat Shelter Setup",
+      "providerName": "WarmWhiskers Pet Services",
+      "providerEmail": "contact@warmwhiskers.com",
+      "price": 45,
+      "rating": 4.7,
+      "slotsAvailable": 2,
+      "description": "Installation of cozy heated outdoor shelters for feral and outdoor cats.",
+     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWFubsIx__1JzcakRo1J7latB7dRHacwzckLnL1y9xebtcb_wZ5zPQYij1Xon08IkqfA&usqp=CAU",
+      "category": "Shelter"
+    },
+    {
+      "serviceId": 4,
+      "serviceName": "Winter Dog Walking with Insulated Gear",
+      "providerName": "Frosty Paws Walkers",
+      "providerEmail": "support@frostypaws.com",
+      "price": 20,
+      "rating": 4.6,
+      "slotsAvailable": 5,
+      "description": "Cold-weather dog walking with booties and jackets provided to ensure safety and comfort.",
+      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToew0zA52PdAX_ds_uB0LI1Ssm-g7oL8Jppn2SMx3s7lM0Gl0EmsKpC-SORIEmnPbwHX4&usqp=CAU",
+      "category": "Exercise"
+    },
+    {
+      "serviceId": 5,
+      "serviceName": "Winter Nutrition Plans for Cats",
+      "providerName": "Healthy Tails Vet Services",
+      "providerEmail": "care@healthytailsvet.com",
+      "price": 35,
+      "rating": 4.9,
+      "slotsAvailable": 3,
+      "description": "Winter-specific nutrition plans to support immune health and fur maintenance for cats.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3moNUdtYLa1NRxusdRr8ogjEi1U-YjQDEZRlS7Yf-xAjLGl838lo-mC89RmM7U1_peoY&usqp=CAU",
+      "category": "Nutrition"
+    },
+    {
+      "serviceId": 6,
+      "serviceName": "Indoor Play Therapy for Pets",
+      "providerName": "Playful Pets Co.",
+      "providerEmail": "fun@playfulpets.com",
+      "price": 18,
+      "rating": 4.5,
+      "slotsAvailable": 6,
+      "description": "Interactive play sessions indoors to keep pets mentally stimulated during the cold season.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToew0zA52PdAX_ds_uB0LI1Ssm-g7oL8Jppn2SMx3s7lM0Gl0EmsKpC-SORIEmnPbwHX4&usqp=CAU",
+      "category": "Recreation"
+    }
+  ]
+  

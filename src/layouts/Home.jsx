@@ -2,6 +2,11 @@ import React from "react";
 
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import HeroSlider from "../components/HeroSlider/HeroSlider";
+import PetServices from "../components/PetServices";
+import WinterTips from "../components/WinterTips";
+import ExpertVets from "../components/ExpertVets";
+import PetCareTips from "../components/PetCareTips";
 
 const Home = () => {
     return(
@@ -10,11 +15,21 @@ const Home = () => {
                 <Header></Header>
             </header>
         <main>
-            <section>j</section>
-            <section>oi</section>
-            <section>oi</section>
-            <section>oi</section>
-            <section>ojjj</section>
+            <section>
+                <HeroSlider></HeroSlider>
+            </section>
+            <section>
+                <PetServices></PetServices>
+            </section>
+            <section>
+                <WinterTips></WinterTips>
+            </section>
+            <section>
+                <ExpertVets></ExpertVets>
+            </section>
+            <section>
+                <PetCareTips></PetCareTips>
+            </section>
         </main>
            <footer>
               <Footer></Footer>
