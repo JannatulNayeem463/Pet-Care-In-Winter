@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast"; 
@@ -7,6 +7,8 @@ import toast from "react-hot-toast";
 const Register = () => {
   const { createUser, setUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+
+   const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -21,7 +23,10 @@ const Register = () => {
         const user = result.user;
         setUser(user);
         toast.success("Registration successful ✅"); 
+
+        navigate("/");
       })
+
       .catch((error) => {
         toast.error(error.message);
       });

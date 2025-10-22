@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 const PetServices = () => {
   const [services, setServices] = useState([]);
@@ -12,6 +14,8 @@ const PetServices = () => {
   }, []);
 
   return (
+    <div>
+        
     <div className="p-5 text-center font-sans">
       <h2 className="pt-10 pb-10 font-bold text-3xl text-gray-800">
         Popular Winter Care Services
@@ -41,6 +45,8 @@ const PetServices = () => {
           </div>
         ))}
       </div>
+    </div>
+    
     </div>
   );
 };

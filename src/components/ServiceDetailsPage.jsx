@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Header from "./Header/Header";
 
 const ServiceDetailsPage = () => {
   const { id } = useParams();
@@ -56,6 +57,10 @@ const ServiceDetailsPage = () => {
     );
 
   return (
+    <div>
+        <header>
+            <Header></Header>
+        </header>
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-4">{service.serviceName}</h1>
 
@@ -137,6 +142,8 @@ const ServiceDetailsPage = () => {
           </div>
         )}
       </div>
+    </div>
+    
     </div>
   );
 };

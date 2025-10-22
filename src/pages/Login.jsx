@@ -73,7 +73,9 @@ const Login = () => {
               </Link>
             </div>
 
-            <button type="submit" className="btn btn-neutral mt-4">Login</button>
+            <Link to="/auth/register">
+            <button type="submit" className="btn btn-neutral mt-4 ml-25 ">Login</button>
+            </Link>
 
             <p className="font-semibold text-center pt-5">
               Don't have an account?{" "}
