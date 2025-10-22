@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa"; // 👁️ আইকন ইমপোর্ট
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -8,7 +9,8 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const [email, setEmail] = useState(""); // 🔥 ইমেইল স্টেট
+  const [email, setEmail] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // 👁️ পাসওয়ার্ড টগল
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -45,21 +47,31 @@ const Login = () => {
               placeholder="Email"
               required
               value={email}
-              onChange={(e) => setEmail(e.target.value)} // 🔥 email ধরে রাখে
+              onChange={(e) => setEmail(e.target.value)}
             />
+
             <label className="label">Password</label>
-            <input
-              name="password"
-              type="password"
-              className="input"
-              placeholder="Password"
-              required
-            />
-            <div>
+            <div className="relative">
+              <input
+                name="password"
+                type={showPassword ? "text" : "password"}
+                className="input w-full pr-12"
+                placeholder="Password"
+                required
+              />
+              <div
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute inset-y-0 right-3 flex items-center cursor-pointer text-gray-500 text-xl"
+              >
+                {showPassword ? < FaRegEye /> : <FaRegEyeSlash/>}
+              </div>
+            </div>
+
+            <div className="mt-2">
               <Link
                 className="link link-hover text-blue-600"
                 to="/auth/forgot-password"
-                state={{ email }} // ✅ 🔥 স্টেট দিয়ে ইমেইল পাঠানো হচ্ছে
+                state={{ email }}
               >
                 Forgot password?
               </Link>
