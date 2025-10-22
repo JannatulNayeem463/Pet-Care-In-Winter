@@ -1,20 +1,15 @@
 import React, { use, useState } from "react";
-import { NavLink} from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import AuthProvider, { AuthContext } from "../../provider/AuthProvider";
 
 const Header = () => {
-  
-  const {user1,logOut} = use(AuthContext)
+  const { user1, logOut } = use(AuthContext);
 
-  const [user, setUser] = useState (null);
-  
+  const [user, setUser] = useState(null);
 
   const handleLogin = () => {
-    
-    
-
     setUser({
       displayName: "John Doe",
       avatarUrl: "https://i.pravatar.cc/40",
@@ -24,12 +19,13 @@ const Header = () => {
   const handleLogout = () => {
     setUser(null);
     console.log("hgfth dddf");
-    logOut().then(() => {
-      alert("You Logged Out Successfully")
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    logOut()
+      .then(() => {
+        alert("You Logged Out Successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -44,7 +40,12 @@ const Header = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
             </svg>
           </label>
           <ul
@@ -52,13 +53,34 @@ const Header = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/services">Services</NavLink>
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : ""
+                }
+              >
+                Services
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/profile">My Profile</NavLink>
+              <NavLink
+                to="/profile"
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : ""
+                }
+              >
+                My Profile
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -70,17 +92,32 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink to="/" activeClassName="text-primary" exact>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : ""
+              }
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/services" activeClassName="text-primary">
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : ""
+              }
+            >
               Services
             </NavLink>
           </li>
           <li>
-            <NavLink to="/profile" activeClassName="text-primary">
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : ""
+              }
+            >
               My Profile
             </NavLink>
           </li>
@@ -90,25 +127,37 @@ const Header = () => {
       <div className="navbar-end flex items-center gap-3">
         {user ? (
           <>
-            <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+            <div
+              className="tooltip tooltip-bottom"
+              data-tip={user.displayName}
+            >
               <img
                 src={user.avatarUrl}
                 alt="User Avatar"
                 className="w-10 h-10 rounded-full cursor-pointer"
               />
             </div>
-            <button onClick={handleLogout} className="btn btn-outline btn-primary">
+            <button
+              onClick={handleLogout}
+              className="btn btn-outline btn-primary"
+            >
               Logout
             </button>
           </>
         ) : (
           <>
-           <Link to="/auth/login">
-           <button onClick={handleLogin} className="btn btn-outline btn-primary" >
-              Login
-            </button>
-           </Link>
-            <NavLink to="/auth/register" className="btn btn-outline btn-primary">
+            <Link to="/auth/login">
+              <button
+                onClick={handleLogin}
+                className="btn btn-outline btn-primary"
+              >
+                Login
+              </button>
+            </Link>
+            <NavLink
+              to="/auth/register"
+              className="btn btn-outline btn-primary"
+            >
               Register
             </NavLink>
           </>
