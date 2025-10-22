@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
+
 
 const PetServices = () => {
   const [services, setServices] = useState([]);

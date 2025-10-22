@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { AuthContext } from "../provider/AuthProvider";  // <-- path ঠিক করুন
+import { AuthContext } from "../provider/AuthProvider";  
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);

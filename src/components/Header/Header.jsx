@@ -18,7 +18,7 @@ const Header = () => {
 
   const handleLogout = () => {
     setUser(null);
-    console.log("hgfth dddf");
+    // console.log("hgfth dddf");
     logOut()
       .then(() => {
         alert("You Logged Out Successfully");

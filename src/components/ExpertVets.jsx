@@ -7,7 +7,8 @@ const ExpertVets = () => {
     fetch('/experts.json')
       .then((res) => res.json())
       .then((data) => setExperts(data))
-      .catch((err) => console.error('Failed to load expert vets:', err));
+      .catch((err) => 
+        console.error('Failed to load expert vets:', err));
   }, []);
 
   return (

@@ -18,7 +18,7 @@ const UserProfile = () => {
         photoURL: photoURL,
       });
 
-      // Optional: update context user so UI updates immediately
+      
       setUser({ ...user, displayName: name, photoURL: photoURL });
 
       alert("Profile updated successfully!");
@@ -57,7 +57,7 @@ const UserProfile = () => {
         </button>
       </div>
 
-      {/* Profile Update Form */}
+     
       {editing && (
         <form onSubmit={handleUpdate} className="mt-6 space-y-4">
           <div>

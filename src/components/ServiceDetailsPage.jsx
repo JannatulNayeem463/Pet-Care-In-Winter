@@ -9,7 +9,7 @@ const ServiceDetailsPage = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Book form states
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
@@ -135,7 +135,7 @@ const ServiceDetailsPage = () => {
           </button>
         </form>
 
-        {/* Success toast/message */}
+        
         {successMessage && (
           <div className="mt-4 p-3 bg-green-100 text-green-800 rounded">
             {successMessage}

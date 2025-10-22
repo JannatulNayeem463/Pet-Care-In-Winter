@@ -7,7 +7,7 @@ const ForgotPassword = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Prefill email from login page if available
+  
   const initialEmail = location.state?.email || "";
   const [email, setEmail] = useState(initialEmail);
 
@@ -18,7 +18,7 @@ const ForgotPassword = () => {
       await sendPasswordResetEmail(auth, email);
       alert("Password reset email sent!");
 
-      // ✅ Redirect user to Gmail
+      
       window.location.href = "https://mail.google.com";
     } catch (error) {
       console.error("Reset error:", error.message);
